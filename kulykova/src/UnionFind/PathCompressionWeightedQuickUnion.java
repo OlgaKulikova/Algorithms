@@ -18,21 +18,22 @@ public class PathCompressionWeightedQuickUnion {
         }
     }
 
-    /*private int root (int i) {
+    //var.1 with loop while
+    private int root (int i) {
         while (i != id[i]) {
             id[i] = id[id[i]];
             i = id[i];
         }
         return i;
-    }*/
+    }
 
-    // with recursion
-    private int root(int i) {
+    //var.2 with recursion
+   /* private int root(int i) {
         if (i != id[i]) {
             id[i] = root(id[i]);
         }
         return id[i];
-    }
+    }*/
 
     public boolean find(int p, int q) {
         return root(p) == root(q);
