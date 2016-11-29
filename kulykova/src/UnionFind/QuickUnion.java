@@ -17,7 +17,7 @@ public class QuickUnion {
         return i;
     }
 
-    public boolean find(int p, int q) {
+    public boolean connected(int p, int q) {
         return root(p) == root(q);
     }
 

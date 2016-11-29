@@ -84,12 +84,12 @@ public class AnansyWeb {
                 Pair pair = pairs.get(j);
                 p = pair.getP();
                 q = pair.getQ();
-                if (!quickUnion.find(p, q)) {
+                if (!quickUnion.connected(p, q)) {
                     quickUnion.union(p, q);
                 }
             }
         }
 
-        System.out.println(quickUnion.countRoot());
+        System.out.print(quickUnion.countRoot() + " ");
     }
 }
